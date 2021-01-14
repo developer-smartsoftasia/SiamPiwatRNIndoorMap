@@ -1,4 +1,11 @@
 framework module RNIndoorMap {
-  header "RNIndoorMap-Swift.h"
-  requires objc
+  umbrella header "RNIndoorMap.h"
+
+  export *
+  module * { export * }
+}
+
+module RNIndoorMap.Swift {
+    header "RNIndoorMap-Swift.h"
+    requires objc
 }

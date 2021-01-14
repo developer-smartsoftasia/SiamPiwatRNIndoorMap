@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SiamPiwatRNIndoorMapSDK"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "RNIndoorMap"
   s.homepage     = "https://github.com/developer-smartsoftasia/SiamPiwatRNIndoorMap"
   s.license      = "Siam Piwat Company Limited"
