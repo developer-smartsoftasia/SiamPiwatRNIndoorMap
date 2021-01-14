@@ -1,0 +1,4 @@
+framework module RNIndoorMap {
+  header "RNIndoorMap-Swift.h"
+  requires objc
+}
