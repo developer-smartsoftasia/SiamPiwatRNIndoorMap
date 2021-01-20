@@ -229,7 +229,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SPWIndoorMap
 @property (nonatomic) enum SPWLanguage language;
 @property (nonatomic, readonly, strong) UIViewController * _Nonnull viewController;
 + (void)initialSDKWithSlug:(enum SPWApplication)slug shops:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)shops language:(enum SPWLanguage)language appDelegate:(Class <UIApplicationDelegate> _Nonnull)appDelegate isDebug:(BOOL)isDebug simulateNavigation:(BOOL)simulateNavigation;
-+ (void)getVeunesWithCompletionBlock:(void (^ _Nonnull)(void))completionBlock failureBlock:(void (^ _Nonnull)(NSError * _Nonnull))failureBlock;
++ (void)getVenuesWithCompletionBlock:(void (^ _Nonnull)(void))completionBlock failureBlock:(void (^ _Nonnull)(NSError * _Nonnull))failureBlock;
 + (void)setFloor:(NSInteger)floorNumber;
 + (void)setStores:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)shops;
 + (NSDictionary<NSString *, id> * _Nullable)getStoreByID:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
@@ -249,7 +249,8 @@ SWIFT_CLASS_NAMED("SPWLabelObjC")
 @property (nonatomic, copy) NSString * _Nullable english;
 /// Chinese
 @property (nonatomic, copy) NSString * _Nullable chinese;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM_NAMED(NSInteger, SPWLanguage, "SPWLanguageObjC", closed) {
@@ -298,7 +299,8 @@ SWIFT_CLASS_NAMED("SPWStoreObjC")
 /// returns:
 /// Localized String
 - (NSString * _Nullable)nameLocalized SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
