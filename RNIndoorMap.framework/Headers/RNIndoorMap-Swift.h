@@ -209,7 +209,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-typedef SWIFT_ENUM_NAMED(NSInteger, SPWApplication, "SPWApplicationSlugObjC", closed) {
+typedef SWIFT_ENUM_NAMED(NSInteger, SPWApplication, "SPWApplicationSlugObjC", open) {
 /// One Siam
   SPWApplicationOneSiam = 1,
   SPWApplicationIconSiam = 2,
@@ -254,7 +254,7 @@ SWIFT_CLASS_NAMED("SPWLabelObjC")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM_NAMED(NSInteger, SPWLanguage, "SPWLanguageObjC", closed) {
+typedef SWIFT_ENUM_NAMED(NSInteger, SPWLanguage, "SPWLanguageObjC", open) {
 /// Thai
   SPWLanguageThai SWIFT_COMPILE_NAME("th") = 0,
 /// English

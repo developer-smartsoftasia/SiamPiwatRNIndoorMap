@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "IndoorMapSDK-Bridging-Header.h"
+
 //! Project version number for RNIndoorMap.
 FOUNDATION_EXPORT double RNIndoorMapVersionNumber;
 
