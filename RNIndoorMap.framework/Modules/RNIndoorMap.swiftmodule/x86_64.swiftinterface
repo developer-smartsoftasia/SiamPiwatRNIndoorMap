@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name RNIndoorMap
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name RNIndoorMap
 import Action
 import CoreLocation
 import Device
@@ -213,7 +213,7 @@ extension SPWAISLocation : Swift.Decodable {
   }
 }
 @_inheritsConvenienceInitializers @objc(SPWIndoorMapManager) public class SPWIndoorMapSDKManagerObjC : ObjectiveC.NSObject {
-  @objc(sharedInstance) public static let shared: RNIndoorMap.SPWIndoorMapSDKManagerObjC
+  @objc(sharedInstance) public static var shared: RNIndoorMap.SPWIndoorMapSDKManagerObjC
   @objc public var language: RNIndoorMap.SPWLanguageObjC
   @objc public var viewController: UIKit.UIViewController {
     @objc get
@@ -273,7 +273,7 @@ public enum SPWLanguage : Swift.Int {
   }
 }
 @_hasMissingDesignatedInitializers public class SPWIndoorMapSDKManager {
-  public static let shared: RNIndoorMap.SPWIndoorMapSDKManager
+  public static var shared: RNIndoorMap.SPWIndoorMapSDKManager
   public var categories: [RNIndoorMap.SPWCategory]
   public var applicationSlug: RNIndoorMap.SPWApplicationSlug
   public var language: RNIndoorMap.SPWLanguage
@@ -307,20 +307,3 @@ public enum SPWLanguage : Swift.Int {
 public typealias SPWCompletion = () -> Swift.Void
 public typealias SPWFailure = (RNIndoorMap.SPWApplicationError) -> Swift.Void
 public typealias SPWGRadiusLatLonBuilding = (location: CoreLocation.CLLocation, radisMeter: Swift.Double)
-extension RNIndoorMap.ApplicationInternalError : Swift.Equatable {}
-extension RNIndoorMap.ApplicationInternalError : Swift.Hashable {}
-extension RNIndoorMap.SPWApplicationSlugObjC : Swift.Equatable {}
-extension RNIndoorMap.SPWApplicationSlugObjC : Swift.Hashable {}
-extension RNIndoorMap.SPWApplicationSlugObjC : Swift.RawRepresentable {}
-extension RNIndoorMap.SPWLanguageObjC : Swift.Equatable {}
-extension RNIndoorMap.SPWLanguageObjC : Swift.Hashable {}
-extension RNIndoorMap.SPWLanguageObjC : Swift.RawRepresentable {}
-extension RNIndoorMap.SPWDepartmentSlug : Swift.Equatable {}
-extension RNIndoorMap.SPWDepartmentSlug : Swift.Hashable {}
-extension RNIndoorMap.SPWDepartmentSlug : Swift.RawRepresentable {}
-extension RNIndoorMap.SPWApplicationSlug : Swift.Equatable {}
-extension RNIndoorMap.SPWApplicationSlug : Swift.Hashable {}
-extension RNIndoorMap.SPWApplicationSlug : Swift.RawRepresentable {}
-extension RNIndoorMap.SPWLanguage : Swift.Equatable {}
-extension RNIndoorMap.SPWLanguage : Swift.Hashable {}
-extension RNIndoorMap.SPWLanguage : Swift.RawRepresentable {}
